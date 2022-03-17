@@ -76,15 +76,12 @@ const Temp = () => {
     <div className="wrap" style={{
       backgroundImage: `url("./images/${background}")` ,
       backgroundRepeat:"no-repeat",
-      backgroundPosition: "center",
       backgroundSize: "cover",
     }}>
 
     <div className="main-title">
      <h2>AccuWeather</h2>
-    </div>
-
-      <div className="search">
+     <div className="search">
          <input type="search" placeholder="Enter the place" title="Enter the place.."
          autoFocus id="search" className="searchItem" value={searchValue} 
          onChange={(e)=>setSearchValue(e.target.value)} />
@@ -93,6 +90,8 @@ const Temp = () => {
            Search
          </button>
       </div>
+    </div>
+
    
     <Weathercard tempInfo={tempInfo}/>
     </div>
