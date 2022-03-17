@@ -202,14 +202,18 @@ body {
 }
 @media (max-width:576px) {
   .wrap{
-    width:541px;
+    width:540px;
   }
   .widget{
     position: absolute;
-    width: 490px;
+    width: 465px;
   }
   .search{
     width: 71%;
+    margin-bottom: 16px;
+  }
+  .widget .weatherIcon{
+    font-size: 79px;
   }
   .widget .extra-temp .extra-info-leftside {
     font-size: 14px;
