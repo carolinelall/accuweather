@@ -41,6 +41,7 @@ body {
 .widget {
   display: flex;
   height: 304px;
+  position: absolute;
   width: 526px;
   margin-top: -90px;
   flex-direction: column;
@@ -192,6 +193,7 @@ body {
 
 .wrap {
   display: flex;
+  max-width: 1267px;
   position: relative;
   justify-content: center;
   align-items: center;
@@ -200,12 +202,24 @@ body {
   height: 700px;
   margin-top: -40px;
 }
+
+@media (min-width:1200px) {
+  .wrap{
+    max-width: 1265px;
+  }
+}
+@media (min-width:576px) {
+.widget .weatherIcon{
+  font-size: 75px;
+  padding: 10px 0;
+}
+}
 @media (max-width:576px) {
   .wrap{
-    width:540px;
+    width: 766px;
   }
+  
   .widget{
-    position: absolute;
     width: 465px;
   }
   .search{
@@ -219,4 +233,57 @@ body {
     font-size: 14px;
   }
  
+}
+@media (max-width:350px) {
+  .wrap{
+    width: 467px;
+  }
+  .search{
+    width: 82%;
+  }
+  .searchItem{
+    height: 2rem;
+    width: 13rem;
+  }
+  .searchButton{
+    height: 1.9rem;
+    width: 4.2rem;
+  }
+  .weather-info{
+    width: 26rem;
+  }
+  .widget{
+    height: 276px;
+    width: 401px;
+  }
+  .widget .weatherIcon {
+    height: 35%;
+    font-size: 66px;
+    padding-bottom: 0px;
+}
+.widget .weatherInfo .temperature {
+    font-size: 39px;
+    flex: -1 0 41%;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 8px;
+}
+.widget .weatherInfo .description .weatherCondition {
+  font-size: 22px;
+}
+.widget .weatherInfo .description .place {
+  font-size: 13px;
+}
+.widget .date{
+  font-size: 15px;
+}
+.widget .extra-temp{
+  padding: 25px 0;
+}
+.widget .extra-temp .extra-info-leftside {
+font-size: 12px;
+}
+.widget .extra-temp p {
+  font-size: 22px;
+}
 }
